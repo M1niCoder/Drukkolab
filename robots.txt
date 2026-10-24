@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Сайт закрито від індексації. Вимкніть site.noindex у src/config/site.mjs, коли будете готові до публікації.

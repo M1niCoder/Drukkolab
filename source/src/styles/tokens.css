@@ -1,0 +1,91 @@
+/* ДИЗАЙН-ТОКЕНИ: Warm Graphite Atelier */
+:root {
+  /* Темні поверхні */
+  --obsidian: #171513;
+  --espresso: #1f1b18;
+  --graphite: #2a2521;
+  --dark-border: #433a32;
+
+  /* Світлі поверхні */
+  --cream: #f3eee6;
+  --sand: #e4dccf;
+  --ivory: #fbf9f5;
+
+  /* Текст */
+  --text-on-dark: #f3eee6;
+  --text-on-dark-2: #cfc3b3;
+  --text-on-light: #2a2521;
+  --text-on-light-2: #5f554b;
+
+  /* Акцент */
+  --bronze: #c18a5a;
+  --bronze-hover: #d5a579;
+  --bronze-dark: #7a4e2b;
+
+  /* Семантика */
+  --success: #237a57;
+  --error: #b33f38;
+  --warning: #94601f;
+  --info: #345c78;
+
+  /* Градієнти */
+  --grad-dark: linear-gradient(135deg, #171513 0%, #1f1b18 55%, #2a2521 100%);
+  --grad-spot: radial-gradient(ellipse at 70% 30%, rgba(193, 138, 90, 0.18) 0%, rgba(193, 138, 90, 0.04) 35%, transparent 70%);
+  --grad-cream: linear-gradient(145deg, #fbf9f5 0%, #f3eee6 60%, #e4dccf 100%);
+  --grad-bronze: linear-gradient(120deg, #7a4e2b 0%, #c18a5a 50%, #d5a579 100%);
+
+  /* Типографіка */
+  /* Space Grotesk не має кирилиці: латиниця (назва, цифри) буде в ньому, українські літери в Onest */
+  --font: "Space Grotesk", "Onest", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fs-display: clamp(3.2rem, 7vw, 6.5rem);
+  --fs-h1: clamp(2.8rem, 5.5vw, 5.2rem);
+  --fs-h1-page: clamp(2.4rem, 5vw, 4.4rem);
+  --fs-h2: clamp(2.1rem, 4vw, 3.6rem);
+  --fs-h3: clamp(1.4rem, 2.3vw, 2rem);
+  --fs-h4: 1.25rem;
+  --fs-lead: 1.125rem;
+  --fs-body: 1rem;
+  --fs-support: 0.875rem;
+  --fs-small: 0.8125rem;
+
+  /* Простір */
+  --container: 1240px;
+  --gutter: clamp(18px, 4vw, 48px);
+  --section-y: clamp(52px, 9vw, 112px);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Контекст секції: змінні кольору, що залежать від фону */
+.section--dark,
+.section--espresso {
+  --fg: var(--text-on-dark);
+  --fg-2: var(--text-on-dark-2);
+  --accent: var(--bronze);
+  --link: var(--bronze-hover);
+  --border: var(--dark-border);
+  --surface: var(--graphite);
+  --art-bg: var(--graphite);
+  --btn-bg: var(--bronze);
+  --btn-fg: var(--obsidian);
+  --btn-hover: var(--bronze-hover);
+  color: var(--fg);
+}
+.section--dark { --bg: var(--obsidian); background: var(--obsidian); }
+.section--espresso { --bg: var(--espresso); background: var(--espresso); }
+
+.section--cream,
+.section--sand {
+  --fg: var(--text-on-light);
+  --fg-2: var(--text-on-light-2);
+  --accent: var(--bronze-dark);
+  --link: var(--bronze-dark);
+  --border: #d3c7b6;
+  --btn-bg: var(--graphite);
+  --btn-fg: var(--cream);
+  --btn-hover: var(--obsidian);
+  color: var(--fg);
+}
+.section--cream { --bg: var(--cream); --surface: var(--ivory); --art-bg: var(--sand); background: var(--cream); }
+.section--sand { --bg: var(--sand); --surface: var(--cream); --art-bg: var(--cream); background: var(--sand); border-color: #cdbda8; }

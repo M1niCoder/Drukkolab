@@ -1,0 +1,17 @@
+{
+  "name": "drukkolab-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Статичний сайт Drukkolab (демо-версія). Без залежностей: потрібен лише Node.js 18+.",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:flat": "node build.mjs --html-links --flat --out=..",
+    "build:preview": "node build.mjs --html-links --out=preview",
+    "dev": "node build.mjs && node scripts/serve.mjs dist",
+    "check": "node scripts/check-links.mjs dist"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
